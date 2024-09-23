@@ -81,4 +81,3 @@ spring:
           destination: moviereservation
           contentType: application/json
 
-

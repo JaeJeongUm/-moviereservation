@@ -8,6 +8,13 @@ import lombok.Data;
 import moviereservation.ReserveApplication;
 import moviereservation.domain.Moviereservationcanceled;
 import moviereservation.domain.Moviereserved;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.cloud.stream.messaging.Processor;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.MessageHeaders;
+import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.util.MimeTypeUtils;
 
 @Entity
 @Table(name = "Reserve_table")
@@ -37,11 +44,31 @@ public class Reserve {
     public void onPostPersist() {
         Moviereserved moviereserved = new Moviereserved(this);
         moviereserved.publishAfterCommit();
+        
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = null;
+
+        try {
+            json = objectMapper.writeValueAsString(moviereserved);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("JSON format exception", e);
+        }
+        System.out.println(json);
+        
 
         Moviereservationcanceled moviereservationcanceled = new Moviereservationcanceled(
             this
         );
         moviereservationcanceled.publishAfterCommit();
+
+
+        Processor processor = ReserveApplication.applicationContext.getBean(Processor.class);
+        MessageChannel outputChannel = processor.output();
+    
+        outputChannel.send(MessageBuilder
+        .withPayload(json)
+        .setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON)
+        .build());
     }
 
     public static ReserveRepository repository() {
