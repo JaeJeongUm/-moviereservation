@@ -21,11 +21,7 @@ public class PolicyHandler {
     PaymentRepository paymentRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void whatever(@Payload Moviereserved moviereserved) {
-        
-        System.out.println("\n===PaymentPolicy===");
-        System.out.println(moviereserved.toJson()+"\n");
-    }
+    public void whatever(@Payload Moviereserved moviereserved) {}
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
