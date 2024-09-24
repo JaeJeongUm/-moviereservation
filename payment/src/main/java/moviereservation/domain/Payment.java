@@ -25,7 +25,7 @@ public class Payment {
 
     private Long movieId;
 
-    private Long reservationStatus;
+    private String reservationStatus;
 
     private Integer qty;
 
@@ -60,7 +60,7 @@ public class Payment {
         payment.setQty(moviereserved.getQty());
         payment.setPrice(moviereserved.getQty()*10000);
         payment.setReservationId(moviereserved.getReservationId());
-        payment.setReservedStatus("reserve");
+        payment.setReservationStatus("reserve");
         repository().save(payment);
 
 
@@ -95,7 +95,7 @@ public class Payment {
         repository().findById(moviereservationcanceled.getReservationId()).ifPresent(payment->{
             
             //payment // do something
-            payment.setReservedStatus("cancel");
+            payment.setReservationStatus("cancel");
             repository().save(payment);
          });
         

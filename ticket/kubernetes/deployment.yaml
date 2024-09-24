@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ticket
-          image: "username/ticket:latest"
+          image: "umjaejeong/ticket:20240924"
           ports:
             - containerPort: 8080
           readinessProbe:

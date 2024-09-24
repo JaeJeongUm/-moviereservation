@@ -30,7 +30,7 @@ public class MyPageViewHandler {
             myPage.setUserId(Long.valueOf(moviereserved.getUserId()));
             myPage.setQty(moviereserved.getQty());
             myPage.setMovieTitle(moviereserved.getMovieTitle());
-            myPage.setReserveDt(Date.valueOf(moviereserved.getReservationId()));
+            //myPage.setReserveDt(Date.valueOf(moviereserved.getReservationId()));
             myPage.setReserveDt(moviereserved.getReserveDt());
             // view 레파지 토리에 save
             myPageRepository.save(myPage);
