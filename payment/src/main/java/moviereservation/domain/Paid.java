@@ -20,6 +20,7 @@ public class Paid extends AbstractEvent {
     private Integer qty;
     private Date payDt;
     private Long movieId;
+    private Integer price;
 
     public Paid(Payment aggregate) {
         super(aggregate);

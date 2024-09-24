@@ -23,8 +23,6 @@ public class Payment {
 
     private Float amount;
 
-    private String reservedStatus;
-
     private Long movieId;
 
     private Long reservationStatus;
@@ -32,6 +30,10 @@ public class Payment {
     private Integer qty;
 
     private Date payDt;
+
+    private Integer price;
+
+    private Long reservationId;
 
     @PostPersist
     public void onPostPersist() {
@@ -53,11 +55,14 @@ public class Payment {
     public static void pay(Moviereserved moviereserved) {
         //implement business logic here:
 
-        /** Example 1:  new item 
         Payment payment = new Payment();
+        payment.setMovieId(moviereserved.getMovieId());
+        payment.setQty(moviereserved.getQty());
+        payment.setPrice(moviereserved.getQty()*10000);
+        payment.setReservationId(moviereserved.getReservationId());
+        payment.setReservedStatus("reserve");
         repository().save(payment);
 
-        */
 
         /** Example 2:  finding and process
         
@@ -85,16 +90,15 @@ public class Payment {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process**/
         
-        repository().findById(moviereservationcanceled.get???()).ifPresent(payment->{
+        repository().findById(moviereservationcanceled.getReservationId()).ifPresent(payment->{
             
-            payment // do something
+            //payment // do something
+            payment.setReservedStatus("cancel");
             repository().save(payment);
-
-
          });
-        */
+        
 
     }
     //>>> Clean Arch / Port Method

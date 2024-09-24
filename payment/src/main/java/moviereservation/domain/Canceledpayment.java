@@ -14,12 +14,13 @@ public class Canceledpayment extends AbstractEvent {
     private Long id;
     private Long paymentId;
     private Float amount;
-    private String reservedStatus;
     private String movieTitle;
     private Long reservationStatus;
     private Integer qty;
     private Date payDt;
     private Long movieId;
+    private Integer price;
+    private Long reservationId;
 
     public Canceledpayment(Payment aggregate) {
         super(aggregate);

@@ -51,16 +51,11 @@ public class Inventory {
 
         */
 
-        /** Example 2:  finding and process
-        
-        repository().findById(paid.get???()).ifPresent(inventory->{
-            
-            inventory // do something
+        repository().findById(paid.getMovieId()).ifPresent(inventory->{
+            inventory.setStock(inventory.getStock()+paid.getQty()); // do something
             repository().save(inventory);
-
-
          });
-        */
+        
 
     }
 
@@ -75,16 +70,10 @@ public class Inventory {
 
         */
 
-        /** Example 2:  finding and process
-        
-        repository().findById(canceledpayment.get???()).ifPresent(inventory->{
-            
-            inventory // do something
+        repository().findById(canceledpayment.getMovieId()).ifPresent(inventory->{
+            inventory.setStock(inventory.getStock()-canceledpayment.getQty()); // do something
             repository().save(inventory);
-
-
          });
-        */
 
     }
     //>>> Clean Arch / Port Method

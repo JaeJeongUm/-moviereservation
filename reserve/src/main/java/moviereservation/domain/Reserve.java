@@ -36,7 +36,7 @@ public class Reserve {
 
     private String movieTitle;
 
-    private String reservedStatus;
+    private String reservationStatus;
 
     private Long movieId;
 
@@ -60,15 +60,6 @@ public class Reserve {
             this
         );
         moviereservationcanceled.publishAfterCommit();
-
-
-        Processor processor = ReserveApplication.applicationContext.getBean(Processor.class);
-        MessageChannel outputChannel = processor.output();
-    
-        outputChannel.send(MessageBuilder
-        .withPayload(json)
-        .setHeader(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON)
-        .build());
     }
 
     public static ReserveRepository repository() {
