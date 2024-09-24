@@ -11,11 +11,11 @@ public class Paid extends AbstractEvent {
 
     private Long id;
     private Long paymentId;
-    private Float amount;
-    private String reservedStatus;
-    private String movieTitle;
-    private Long reservationStatus;
-    private Integer qty;
     private Date payDt;
+    private Integer price;
+    private Long reservationId;
+    private Integer qty;
+    private String movieTitle;
+    private String reservationStatus;
     private Long movieId;
 }

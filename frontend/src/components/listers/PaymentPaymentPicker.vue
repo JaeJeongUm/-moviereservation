@@ -18,22 +18,25 @@
                                 PaymentId :  {{item.paymentId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Amount :  {{item.amount }}
+                                PayDt :  {{item.payDt }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ReservedStatus :  {{item.reservedStatus }}
+                                Price :  {{item.price }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                MovieId :  {{item.movieId }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                ReservationStatus :  {{item.reservationStatus }}
+                                ReservationId :  {{item.reservationId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Qty :  {{item.qty }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PayDt :  {{item.payDt }}
+                                MovieTitle :  {{item.movieTitle }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ReservationStatus :  {{item.reservationStatus }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                MovieId :  {{item.movieId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -86,6 +89,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
                     
                     
                     

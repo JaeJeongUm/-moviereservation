@@ -9,10 +9,11 @@ import moviereservation.infra.AbstractEvent;
 public class Moviereservationcanceled extends AbstractEvent {
 
     private Long id;
-    private String reservedStatus;
-    private Integer qty;
-    private Date reserveDt;
-    private String movieTitle;
     private String userId;
     private Long reservationId;
+    private Date reserveDt;
+    private Integer qty;
+    private String movieTitle;
+    private String reservationStatus;
+    private Long movieId;
 }

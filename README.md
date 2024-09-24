@@ -35,7 +35,7 @@ mvn spring-boot:run
 ## Test by API
 - reserve
 ```
- http :8088/reserves id="id" userId="userId" reservationId="reservationId" reserveDt="reserveDt" qty="qty" movieTitle="movieTitle" reservedStatus="reservedStatus" movieId="movieId" 
+ http :8088/reserves id="id" userId="userId" reservationId="reservationId" reserveDt="reserveDt" qty="qty" movieTitle="movieTitle" reservationStatus="reservationStatus" movieId="movieId" 
 ```
 - ticket
 ```
@@ -46,7 +46,7 @@ mvn spring-boot:run
 ```
 - payment
 ```
- http :8088/payments id="id" paymentId="paymentId" amount="amount" reservedStatus="reservedStatus" movieId="movieId" reservationStatus="reservationStatus" qty="qty" payDt="payDt" 
+ http :8088/payments id="id" paymentId="paymentId" payDt="payDt" price="price" reservationId="reservationId" qty="qty" movieTitle="movieTitle" reservationStatus="reservationStatus" movieId="movieId" 
 ```
 
 

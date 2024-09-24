@@ -110,12 +110,13 @@
             
             me.newValue = {
                 'paymentId': 0,
-                'amount': 0,
-                'reservedStatus': '',
-                'movieId': 0,
-                'reservationStatus': 0,
+                'payDt': '2024-09-24',
+                'price': 0,
+                'reservationId': 0,
                 'qty': 0,
-                'payDt': '2024-09-23',
+                'movieTitle': '',
+                'reservationStatus': '',
+                'movieId': 0,
             }
         },
         methods:{

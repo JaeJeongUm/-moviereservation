@@ -21,7 +21,7 @@
                 <String label="MovieTitle" v-model="item.movieTitle" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="ReservedStatus" v-model="item.reservedStatus" :editMode="editMode" @change="change" />
+                <String label="ReservationStatus" v-model="item.reservationStatus" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="MovieId" v-model="item.movieId" :editMode="editMode" @change="change" />

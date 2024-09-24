@@ -30,7 +30,7 @@
                                 MovieTitle :  {{item.movieTitle }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ReservedStatus :  {{item.reservedStatus }}
+                                ReservationStatus :  {{item.reservationStatus }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 MovieId :  {{item.movieId }}

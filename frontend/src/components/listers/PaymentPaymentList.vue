@@ -48,17 +48,19 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PaymentId :  {{data.paymentId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Amount :  {{data.amount }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ReservedStatus :  {{data.reservedStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ MovieId :  {{data.movieId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ReservationStatus :  {{data.reservationStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Qty :  {{data.qty }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PayDt :  {{data.payDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReservationId :  {{data.reservationId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Qty :  {{data.qty }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MovieTitle :  {{data.movieTitle }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReservationStatus :  {{data.reservationStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MovieId :  {{data.movieId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -127,12 +129,13 @@
             
             this.newValue = {
                 'paymentId': 0,
-                'amount': 0,
-                'reservedStatus': '',
-                'movieId': 0,
-                'reservationStatus': 0,
+                'payDt': '2024-09-24',
+                'price': 0,
+                'reservationId': 0,
                 'qty': 0,
-                'payDt': '2024-09-23',
+                'movieTitle': '',
+                'reservationStatus': '',
+                'movieId': 0,
             }
         },
         methods: {

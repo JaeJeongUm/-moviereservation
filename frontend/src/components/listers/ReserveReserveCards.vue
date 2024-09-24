@@ -111,10 +111,10 @@
             me.newValue = {
                 'userId': '',
                 'reservationId': 0,
-                'reserveDt': '2024-09-23',
+                'reserveDt': '2024-09-24',
                 'qty': 0,
                 'movieTitle': '',
-                'reservedStatus': '',
+                'reservationStatus': '',
                 'movieId': 0,
             }
         },

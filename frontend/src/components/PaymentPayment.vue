@@ -17,12 +17,13 @@
 
         <v-card-text>
             <Number label="PaymentId" v-model="value.paymentId" :editMode="editMode" :inputUI="''"/>
-            <Number label="Amount" v-model="value.amount" :editMode="editMode" :inputUI="''"/>
-            <String label="ReservedStatus" v-model="value.reservedStatus" :editMode="editMode" :inputUI="''"/>
-            <Number label="MovieId" v-model="value.movieId" :editMode="editMode" :inputUI="''"/>
-            <Number label="ReservationStatus" v-model="value.reservationStatus" :editMode="editMode" :inputUI="''"/>
-            <Number label="Qty" v-model="value.qty" :editMode="editMode" :inputUI="''"/>
             <Date label="PayDt" v-model="value.payDt" :editMode="editMode" :inputUI="''"/>
+            <Number label="Price" v-model="value.price" :editMode="editMode" :inputUI="''"/>
+            <Number label="ReservationId" v-model="value.reservationId" :editMode="editMode" :inputUI="''"/>
+            <Number label="Qty" v-model="value.qty" :editMode="editMode" :inputUI="''"/>
+            <String label="MovieTitle" v-model="value.movieTitle" :editMode="editMode" :inputUI="''"/>
+            <String label="ReservationStatus" v-model="value.reservationStatus" :editMode="editMode" :inputUI="''"/>
+            <Number label="MovieId" v-model="value.movieId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>

@@ -21,7 +21,7 @@
             <Date label="ReserveDt" v-model="value.reserveDt" :editMode="editMode" :inputUI="''"/>
             <Number label="Qty" v-model="value.qty" :editMode="editMode" :inputUI="''"/>
             <String label="MovieTitle" v-model="value.movieTitle" :editMode="editMode" :inputUI="''"/>
-            <String label="ReservedStatus" v-model="value.reservedStatus" :editMode="editMode" :inputUI="''"/>
+            <String label="ReservationStatus" v-model="value.reservationStatus" :editMode="editMode" :inputUI="''"/>
             <Number label="MovieId" v-model="value.movieId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

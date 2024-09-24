@@ -21,17 +21,19 @@ public class Payment {
 
     private Long paymentId;
 
-    private Float amount;
+    private Date payDt;
 
-    private String reservedStatus;
+    private Integer price;
 
-    private Long movieId;
-
-    private Long reservationStatus;
+    private Long reservationId;
 
     private Integer qty;
 
-    private Date payDt;
+    private String movieTitle;
+
+    private String reservationStatus;
+
+    private Long movieId;
 
     @PostPersist
     public void onPostPersist() {

@@ -68,12 +68,13 @@
                 [
                     { text: "id", value: "id" },
                     { text: "paymentId", value: "paymentId" },
-                    { text: "amount", value: "amount" },
-                    { text: "reservedStatus", value: "reservedStatus" },
-                    { text: "movieId", value: "movieId" },
-                    { text: "reservationStatus", value: "reservationStatus" },
-                    { text: "qty", value: "qty" },
                     { text: "payDt", value: "payDt" },
+                    { text: "price", value: "price" },
+                    { text: "reservationId", value: "reservationId" },
+                    { text: "qty", value: "qty" },
+                    { text: "movieTitle", value: "movieTitle" },
+                    { text: "reservationStatus", value: "reservationStatus" },
+                    { text: "movieId", value: "movieId" },
                 ],
             payment : [],
             newValue: {},
@@ -92,12 +93,13 @@
 
             this.newValue = {
                 'paymentId': 0,
-                'amount': 0,
-                'reservedStatus': '',
-                'movieId': 0,
-                'reservationStatus': 0,
+                'payDt': '2024-09-24',
+                'price': 0,
+                'reservationId': 0,
                 'qty': 0,
-                'payDt': '2024-09-23',
+                'movieTitle': '',
+                'reservationStatus': '',
+                'movieId': 0,
             }
         },
         methods: {

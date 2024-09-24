@@ -9,22 +9,25 @@
                 <Number label="PaymentId" v-model="item.paymentId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="Amount" v-model="item.amount" :editMode="editMode" @change="change" />
+                <Date label="PayDt" v-model="item.payDt" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="ReservedStatus" v-model="item.reservedStatus" :editMode="editMode" @change="change" />
+                <Number label="Price" v-model="item.price" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="MovieId" v-model="item.movieId" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <Number label="ReservationStatus" v-model="item.reservationStatus" :editMode="editMode" @change="change" />
+                <Number label="ReservationId" v-model="item.reservationId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Qty" v-model="item.qty" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Date label="PayDt" v-model="item.payDt" :editMode="editMode" @change="change" />
+                <String label="MovieTitle" v-model="item.movieTitle" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="ReservationStatus" v-model="item.reservationStatus" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="MovieId" v-model="item.movieId" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

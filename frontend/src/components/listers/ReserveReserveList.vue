@@ -57,7 +57,7 @@
                             [ ReserveDt :  {{data.reserveDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Qty :  {{data.qty }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MovieTitle :  {{data.movieTitle }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ReservedStatus :  {{data.reservedStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReservationStatus :  {{data.reservationStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MovieId :  {{data.movieId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -128,10 +128,10 @@
             this.newValue = {
                 'userId': '',
                 'reservationId': 0,
-                'reserveDt': '2024-09-23',
+                'reserveDt': '2024-09-24',
                 'qty': 0,
                 'movieTitle': '',
-                'reservedStatus': '',
+                'reservationStatus': '',
                 'movieId': 0,
             }
         },
